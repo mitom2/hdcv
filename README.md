@@ -42,7 +42,7 @@ Example:
 ```
 This will convert the decimal number 255 to uppercase hexadecimal (FF).
 ## Library usage & example
-To use all available functions, you simply need to include the hdcv.hpp file in your project. All functions are in the hdcv namespace. Check documentation to see functions definitions.
+To use all available functions, you simply need to include the hdcv.hpp file in your project. All functions are in the hdcv namespace. Check [documentation](https://mitom2.github.io/hdcv/) to see functions definitions.
 
 Example program:
 ```c++
