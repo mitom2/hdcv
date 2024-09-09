@@ -209,7 +209,7 @@ namespace hdcv
      */
     void displayHelp()
     {
-        std::cout << "hdcv [number] [number base] [target base] [OPTION]...\nConverts number between bases.\n\n\tOptions:\n\t-h\tdisplay help\n\t-u\tforce uppercase for results with base>10\n\nExit status:\n 0 if OK,\n non-zero otherwise.";
+        std::cout << "hdcv [number] [number base] [target base] [OPTION]...\nConverts number between bases.\n\n\tOptions:\n\t-h\tdisplay help\n\t-u\tforce uppercase for results with base>10\n\nExit status:\n 0 if OK,\n non-zero otherwise." << std::endl;
     }
 
     /**
@@ -238,28 +238,28 @@ namespace hdcv
                 }
                 else if (i > 3)
                 {
-                    std::cout << "Unknown argument: " << argv[i] << ". See hdcv -h for usage.";
+                    std::cout << "Unknown argument: " << argv[i] << ". See hdcv -h for usage." << std::endl;
                     return 2;
                 }
             }
             if (argc < 4)
             {
-                std::cout << "Too few arguments. See hdcv -h for help.";
+                std::cout << "Too few arguments. See hdcv -h for help." << std::endl;
                 return 1;
             }
             if (!isNumber(argv[2]) || !isNumber(argv[3]))
                 return 3;
             auto res = toString(fromString(argv[1], std::stoi(argv[2])), std::stoi(argv[3]));
-            std::cout << (forceUppercase ? toUpper(res) : res);
+            std::cout << (forceUppercase ? toUpper(res) : res) << std::endl;
         }
         catch (std::invalid_argument &e)
         {
-            std::cout << e.what();
+            std::cout << e.what() << std::endl;
             return 4;
         }
         catch (std::exception &e)
         {
-            std::cout << e.what();
+            std::cout << e.what() << std::endl;
             return 5;
         }
         catch (...)
