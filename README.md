@@ -36,6 +36,7 @@ For example, to convert the binary number 1010 to hexadecimal:
 Command-Line Options:
 - -u    Forces uppercase for results in bases > 10.
 - -h    Displays help information.
+
 Example:
 ```bash
 ./hdcv 255 10 16 -u
